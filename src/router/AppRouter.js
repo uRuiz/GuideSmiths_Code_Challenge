@@ -5,7 +5,7 @@ import {
     Route,
     Redirect
 } from "react-router-dom";
-import { PhoneScreen } from '../components/phones/PhoneScreen';
+import { PhoneDetail } from '../components/phones/PhoneDetail';
 import { PhonesList } from '../components/phones/PhonesList';
 
 export const AppRouter = () => {
@@ -14,7 +14,7 @@ export const AppRouter = () => {
             <div className="container">
                 <Switch>
                     <Route exact path="/" component={ PhonesList } />
-                    <Route exact path="/:phoneId" component={ PhoneScreen } /> 
+                    <Route exact path="/phone/:phoneId" component={ PhoneDetail } /> 
 
                     <Redirect to="/" />
                 </Switch>    
