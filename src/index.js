@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { GuideSmithsApp } from './GuideSmithsApp';
+import { AppRouter } from './router/AppRouter';
 
-ReactDOM.render(
-  <GuideSmithsApp />,
-  document.getElementById('root')
-);
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
 
