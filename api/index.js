@@ -15,8 +15,17 @@ const phonesRouter = require('./routes/phones');
 
 app.use('/phones', phonesRouter);
 
+app.use( (req, res, next) => {
+    respuesta = {
+        error: true,
+        codigo: 404,
+        mensaje: 'URL no encontrada'
+    };
+    res.status(404).send(respuesta);
+});
+
 app.listen(9000, () => {
- console.log("The server is started on port 9000");
+    console.log("The server is started on port 9000");
 });
 
 
