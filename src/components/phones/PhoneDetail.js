@@ -17,7 +17,7 @@ export const PhoneDetail = () => {
         <div className="no-gutters">
           <h1 className="">{name}</h1>
           <div className="center-image">
-            <img src={require(`../../../public/assets/images/${imageFileName}`)} className="card-img" alt={name} />
+          <img src={`../../../assets/images/${imageFileName}`} className="card-img" alt={name} />
           </div>
         </div>
 
