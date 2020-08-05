@@ -7,3 +7,11 @@ h1 {
   margin:auto;
   max-width: 500px;
 }
+
+.button-div {
+  display: flex;
+} 
+
+.back-button {
+margin: 0 auto;
+}

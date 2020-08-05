@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 import { getPhoneById } from '../../helpers/getPhoneById';
-import PhonesContext from '../../context/PhonesContext'
+import PhonesContext from '../../context/PhonesContext';
+import { Link } from 'react-router-dom';
 
 import './PhoneDetail.css'
 
@@ -17,7 +18,7 @@ export const PhoneDetail = () => {
         <div className="no-gutters">
           <h1 className="">{name}</h1>
           <div className="center-image">
-          <img src={`../../../assets/images/${imageFileName}`} className="card-img" alt={name} />
+            <img src={`../../../assets/images/${imageFileName}`} className="card-img" alt={name} />
           </div>
         </div>
 
@@ -34,6 +35,11 @@ export const PhoneDetail = () => {
             <li className="list-group-item"><span className="font-weight-bold">Price:</span> {price} €</li>
           </ul>
         </div>
+        <Link to="/">
+          <div className="button-div">
+            <button type="button" className="btn btn-outline-info back-button">Back</button>
+          </div>
+        </Link>
       </div>
     )
   }
