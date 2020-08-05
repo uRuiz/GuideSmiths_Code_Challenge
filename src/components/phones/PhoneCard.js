@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 export const PhoneCard = ({ imageFileName, name, price, id }) => {
   return (
@@ -20,4 +21,11 @@ export const PhoneCard = ({ imageFileName, name, price, id }) => {
       </div>
     </div>
   )
+}
+
+PhoneCard.propTypes = {
+  id:PropTypes.number.isRequired,
+  imageFileName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 }
