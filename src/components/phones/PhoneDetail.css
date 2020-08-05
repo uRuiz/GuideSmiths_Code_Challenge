@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+
+.center-image {
+  display:block;
+  margin:auto;
+  max-width: 500px;
+}

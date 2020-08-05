@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { getAllPhones } from '../helpers/getAllPhones';
+import PhonesContext from '../context/PhonesContext'
 
-export const useFetchPhones = ( ) => {
+export const useFetchPhones = () => {
 
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
+  const {phones, setPhones} = useContext(PhonesContext);
+  const [loading, setLoading] = useState(false);
 
-    useEffect( () => {
-        setLoading(true);
-        getAllPhones()
-            .then( phones => {
-                setData(phones);
-                setLoading(false);
-            })
-    }, [])
+  useEffect(() => {
+    setLoading(true);
+    getAllPhones()
+      .then(phones => {
+        setPhones(phones);
+        setLoading(false);
+      })
+  }, [setPhones])
 
-    return {data, loading}; // {data: [], loading: true }
+  return { phones, loading }; // {data: [], loading: true }
 }
