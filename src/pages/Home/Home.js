@@ -7,6 +7,11 @@ export const Home = () => {
 
   const { phones, loading } = useFetchPhones();
 
+  if (phones.length === 0) {
+    return (
+      <h1>API is not running. Please, check it and start</h1>
+    )
+  }
   return (
     <>
       {loading

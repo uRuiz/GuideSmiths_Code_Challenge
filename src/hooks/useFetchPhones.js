@@ -16,5 +16,5 @@ export const useFetchPhones = () => {
       })
   }, [setPhones])
 
-  return { phones, loading }; // {data: [], loading: true }
+  return { phones, loading };
 }
