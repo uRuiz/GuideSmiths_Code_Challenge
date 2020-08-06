@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { getAllPhones } from '../helpers/getAllPhones';
+import { getAllPhones } from '../../helpers/getAllPhones';
 
 describe('Testing endpoint', () => {
 
