@@ -17,6 +17,19 @@ npm start
 ```
 The Express server starts on port `9000`
 
+## Docker: How to build and run containers
+
+In order to build the guidesmiths code challenge frontend container run
+```
+docker build -t guidesmiths-front .
+docker run -i -t -p 3000:3000 guidesmiths-front
+```
+In order to build the guidesmiths code challenge backend container run
+```
+docker build -t guidesmiths-api .
+docker run -p 9000:9000 guidesmiths-api
+```
+
 ## How to start the app
 
 Once you finish starting the API, run these commands from GuideSmiths_Code_Challenge/api folder:
