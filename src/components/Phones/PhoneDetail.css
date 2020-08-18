@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+
+.center-image {
+  display:block;
+  margin:auto;
+  max-width: 500px;
+}
+
+.button-div {
+  display: flex;
+} 
+
+.back-button {
+margin: 0 auto;
+}
