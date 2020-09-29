@@ -19,6 +19,7 @@ export const AppRouter = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/phone/id=:id" component={PhoneDetail} />
+            
 
             <Redirect to="/" />
           </Switch>
